@@ -32,8 +32,6 @@ console.log(sum);
 let x = 2;
 let y = 4;
 
-x++;
-y++;
+x = x + y; y = x - y; x = x - y;
 
 console.log(x, y);
-

@@ -1,5 +1,5 @@
 "use strict";
-
+/*
 //1
 let count = 96;
 
@@ -76,8 +76,48 @@ while (true) {
     if (randomNum > userNum) {
         console.log("Загаданное число больше.");
     }
-    if (randomNum < userNum) {
+    else if (randomNum < userNum) {
         console.log("Загаданное число меньше.");
     }
     userNum = parseInt(prompt("Попробуйте еще раз!"));
+}*/
+
+//5
+let min = 10;
+let max = 500;
+
+function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+let randomNum = getRandom(min , max);
+
+if (randomNum > 25 && randomNum < 200) console.log(`Число ${randomNum} содержится в интервале (25;200).`);
+else console.log(`Число ${randomNum} не содержится в интервале (25;200).`);
+
+
+//6
+min = 1;
+max = 100;
+
+function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+alert("Загадайте число!");
+
+while (true) {
+    let randomNum = getRandom(min , max); 
+    let isMatches = prompt(`Число равно ${randomNum}?`); 
+    if (isMatches == "да") {
+        console.log("Ура! Угадал!");
+        break;
+    } else {
+        let isGreater = prompt(`Число больше ${randomNum}?`);
+        if (isGreater == "да") {
+           min = randomNum +1;
+        } else {
+            max = randomNum - 1;
+        }
+    }
 }
