@@ -75,7 +75,7 @@ console.log(array, newArray);
 let logins = ["Xodahe", "Gixath", "Qexeme", "Bolyky", "Fifiwu"];
 
 let enterLogin = prompt("Введите логин.");
-
+/*
 while (true){
     if (logins.includes(enterLogin)) {
         alert("Логин верный!");
@@ -83,7 +83,12 @@ while (true){
     } else {
         enterLogin = prompt("Попробуйте еще раз.");
     }
+}*/
+
+while (!logins.includes(enterLogin)){
+    enterLogin = prompt("Попробуйте еще раз.");
 }
+console.log("Был введен верный логин");
 
 //5
 let oldLogins = ["Xodahe", "Gixath", "Qexeme", "Bolyky", "Fifiwu"];

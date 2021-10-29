@@ -2,6 +2,7 @@
 
 //1
 function getGoods(count) {
+    if (count >= 11 && count <= 14) return `${count} товаров`;
     if (count % 10 == 1) return `${count} товар`;
     if (count % 10 >= 2 && count % 10 <= 4) return `${count} товара`;
     return `${count} товаров`
@@ -13,8 +14,8 @@ console.log(getGoods(goods));
 //2
 function range(start, end, step = 1) {
     let arr = [];
-    for (let i = start; i < end; i += step) {
-        arr.push(i);
+    for (; start < end; start += step) {
+        arr.push(start);
     }
     return arr;
 }
