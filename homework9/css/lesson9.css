@@ -1,0 +1,21 @@
+
+section {
+    display: flex;
+}
+
+.card {
+    text-align: center;
+    flex: 1;
+    border: 1.5px solid rgb(0,0,255);
+    border-radius: 10px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 0 1rem;
+}
+
+span {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: larger;
+}
+
