@@ -60,9 +60,10 @@ article > a {
     margin: 0 auto;
 }
 
-table {
+.generate-table {
     width: 30%;
     margin-top: 1rem;
     margin-left: 2rem;
+    margin-bottom: 3rem;
 }
 

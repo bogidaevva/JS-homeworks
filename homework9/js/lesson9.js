@@ -127,6 +127,7 @@ let goods = [
 
 function generateTable(arr){
     let table = document.createElement("table");
+    table.classList.add("generate-table");
     table.style.backgroundColor = "#7E60A1";
     //создаем первую строку таблицы с названиями столбцов
     let row = table.insertRow(0);
@@ -258,3 +259,33 @@ function addBooks(booksArr, element) { //в element все это добавля
     }
 }
 addBooks(booksByGenre, bookSection);
+
+//3
+let prises = {
+    headphones: "Наушники",
+    book: "Книга",
+    postcard: "Открытка"
+}
+function generateField(n){ 
+    if(n < 3) return; 
+    let table = document.createElement("table"); 
+    table.style.backgroundColor = "black";
+    for (let i = 0; i < n; i++){ 
+        let row = table.insertRow(i); 
+        for (let i = 0; i < n; i++) { 
+            let cell = row.insertCell(i); 
+            cell.style.backgroundColor = "white";
+            cell.style.height = `${n}rem`;
+            cell.style.width = `${n}rem`;
+            cell.classList.add("field-td");
+        }
+    }
+    document.body.append(table);
+    let getRandom = (arr) => Math.floor(Math.random() * (arr.length+1));
+    let cells = document.getElementsByClassName("field-td");
+    for (let i = 0; i < 3; i++) {
+        cells[getRandom(cells)].setAttribute("prise", Object.values(prises)[getRandom(Array.from(prises))]);
+    }
+}
+
+generateField(4);
