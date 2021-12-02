@@ -1,0 +1,20 @@
+.cards-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 30%;
+}
+
+.card__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+table {
+    margin-top: 3rem;
+    margin-left: 1rem;
+}
